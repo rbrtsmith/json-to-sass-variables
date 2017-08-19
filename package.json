@@ -11,7 +11,8 @@
     "unit:watch": "jest --watch",
     "unit:coverage": "jest --coverage",
     "unit:ci": "jest --maxWorkers=4",
-    "test": "yarn lint && yarn unit"
+    "test": "yarn lint && yarn unit",
+    "test:ci": "yarn lint && yarn unit:ci"
   },
   "devDependencies": {
     "babel-eslint": "^7.2.3",
