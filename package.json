@@ -1,0 +1,11 @@
+{
+  "name": "js-to-sass",
+  "version": "0.1.0",
+  "description": "Convert JSON data to Sass",
+  "main": "index.js",
+  "author": "Robert Smith",
+  "license": "MIT",
+  "devDependencies": {
+    "jest": "^20.0.4"
+  }
+}
