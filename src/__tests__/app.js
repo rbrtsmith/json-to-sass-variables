@@ -7,10 +7,10 @@ beforeEach(() => {
   JSONParse.mockImplementation(data => data)
 })
 
-describe('Convering JS to Sass',() => {
+describe('Convering JS to Sass', () => {
   it('parses a js object and builds a sass string', () => {
     const data = {
-      "colorAlpha": '#000'
+      colorAlpha: '#000'
     }
 
     expect(app(data)).toBe('$colorAlpha: #000;')
@@ -24,12 +24,11 @@ describe('Convering JS to Sass',() => {
           beta: '#777777'
         },
         secondary: {
-          'test': '#eeeeee'
+          test: '#eeeeee'
         }
       }
     }
 
     expect(app(data)).toBe('$alpha: #004400;\n$beta: #777777;\n$test: #eeeeee;')
   })
-
 })
