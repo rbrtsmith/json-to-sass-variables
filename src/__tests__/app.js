@@ -9,19 +9,14 @@ describe('Convering JS to Sass', () => {
     expect(app(data)).toBe('$colorAlpha: #000;')
   })
 
-  it('parses a deep js object and builds a flat sass string', () => {
+  it('parses maps', () => {
     const data = JSON.stringify({
-      colours: {
-        main: {
-          alpha: '#004400',
-          beta: '#777777'
-        },
-        secondary: {
-          test: '#eeeeee'
-        }
+      'nb-breakpoints': {
+        xs: '480px',
+        sm: '720px'
       }
     })
 
-    expect(app(data)).toBe('$alpha: #004400;\n$beta: #777777;\n$test: #eeeeee;')
+    expect(app(data)).toBe('\n$nb-breakpoints: (\nxs: 480px,\nsm: 720px\n);\n')
   })
 })

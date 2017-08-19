@@ -4,7 +4,7 @@ const fs = require('fs')
 
 const source = process.argv[2]
 const output = process.argv[3]
-const jsonToSass = require('./src/index')
+const jsonToSassVariables = require('./src/index')
 
 const writeSass = scss =>
   fs.writeFile(output, scss, 'utf8', (err) => {
@@ -20,7 +20,7 @@ const readJSON = (err, data) => {
     return console.error(err)
   }
 
-  return writeSass(jsonToSass(data))
+  return writeSass(jsonToSassVariables(data))
 }
 
 
