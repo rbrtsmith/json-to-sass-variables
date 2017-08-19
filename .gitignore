@@ -6,3 +6,5 @@ coverage
 .idea/
 dist
 yarn-error.log
+test.json
+test.scss
