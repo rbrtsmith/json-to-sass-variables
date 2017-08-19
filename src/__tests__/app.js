@@ -15,6 +15,7 @@ describe('Convering JS to Sass',() => {
 
     expect(app(data)).toBe('$colorAlpha: #000;')
   })
+
   it('parses a deep js object and builds a flat sass string', () => {
     const data = {
       colours: {
